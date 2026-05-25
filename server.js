@@ -383,7 +383,7 @@ app.get('/api/export', async (req, res) => {
 
 // ── START ─────────────────────────────────────────────────────
 initDB().then(() => {
-  app.listen(PORT, () => console.log(`\n✅ Gestionale avviato su http://localhost:${PORT}\n`));
+  app.listen(PORT, '0.0.0.0', () => console.log(`\n✅ Gestionale avviato su http://localhost:${PORT}\n`));
 }).catch(err => {
   console.error('Errore connessione DB:', err.message);
   process.exit(1);
